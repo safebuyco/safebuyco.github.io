@@ -31,12 +31,13 @@ $(function() {
             $.ajax({
               url: "https://formspree.io/info@safebuy.co",
               method: "POST",
-              data: {name: name,
+              data: {
+                name: name,
                 phone: phone,
                 _replyto: email,
                 message: message
               },
-              dataType: "json"
+              dataType: "json",
                 cache: false,
                 success: function() {
                     // Success message
