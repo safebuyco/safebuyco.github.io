@@ -83,8 +83,10 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-custom {
     background-color: $gray-darker;
     border-color: transparent;
+    // min-height: 70px;
     .navbar-brand {
         color: $theme-primary;
+        padding: 0px;
         @include script-font;
         &:hover,
         &:focus,
@@ -92,7 +94,13 @@ h1, h2, h3, h4, h5, h6 {
         &.active {
             color: darken($theme-primary, 10%);
         }
+        img {
+          max-height: 100%;
+          padding: 1px;
+          width: auto;
+        }
     }
+
     .navbar-collapse {
         border-color: fade-out(white, .02);
     }
@@ -148,6 +156,7 @@ h1, h2, h3, h4, h5, h6 {
             -moz-transition: all 0.3s;
             transition: all 0.3s;
         }
+
         .navbar-nav>.active>a {
             border-radius: 3px;
         }
@@ -288,8 +297,8 @@ section {
                     h4 {
                         margin: 0;
                     }
-                }                
-            }            
+                }
+            }
         }
         .portfolio-caption {
             max-width: 400px;
@@ -574,7 +583,7 @@ section#contact {
        font-weight: 700;
        color: $gray-lighter;
     }
-    :-ms-input-placeholder {  
+    :-ms-input-placeholder {
        @include heading-font;
        font-weight: 700;
        color: $gray-lighter;
@@ -704,8 +713,8 @@ ul.social-buttons {
                 -webkit-transform: rotate(90deg);
                 /* Safari and Chrome */
                 z-index:1052;
-            }            
-        }        
+            }
+        }
     }
     .modal-backdrop {
         opacity: 0;
